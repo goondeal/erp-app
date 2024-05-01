@@ -1,0 +1,35 @@
+{% extends 'branches/base.html' %}
+
+{% block title %} Branch {{branch}} {% endblock %}
+
+{% block content %}
+    {% with show_save_btn=True %}
+        {% include 'branches/components/header.html' %}
+    {% endwith %}
+    <div class="container p-2">
+        <form id="update-branch-form" class="" method="post">
+            {% csrf_token %}
+            <div>
+                <label for="branch_id">Branch:</label>
+                <input type="number" name="branch_id" value="{{form.instance.id}}" disabled>
+            </div>
+            {{ form }}
+            <input class="d-none" type="submit" value="Save">
+        </form>
+    </div>
+    {% include 'branches/components/nav.html' %}
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        const save_btn = document.getElementById('save_btn');
+        console.log(save_btn);
+        // on click btn submit form
+        save_btn.addEventListener('click', () => {
+            const form = document.getElementById('update-branch-form');
+            console.log(form);
+            form.submit();
+        });
+
+    </script>
+{% endblock %}

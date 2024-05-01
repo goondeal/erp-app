@@ -1,0 +1,87 @@
+<div class="p-4 d-flex justify-content-center align-items-center">
+  <a
+    class="{% if first_branch_pk %} text-primary {% else %} text-muted {% endif %} mx-2"
+    href="{% if first_branch_pk %} {% url 'update_branch' pk=first_branch_pk %} {% else %} # {% endif %}"
+    style="width: 1.4rem"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-6 h-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5"
+      />
+    </svg>
+  </a>
+
+  <a
+    class="{% if prev_branch_pk %} text-primary {% else %} text-muted {% endif %} mx-2"
+    href="{% if prev_branch_pk %} {% url 'update_branch' pk=prev_branch_pk %} {% else %} # {% endif %}"
+    style="width: 1.4rem"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-6 h-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M15.75 19.5 8.25 12l7.5-7.5"
+      />
+    </svg>
+  </a>
+  <span class="mx-3" style="color: black">
+    {% if total_prev %} {{total_prev}} / {{total}} {% else %} 0 / 0 {% endif %}
+  </span>
+
+  <a
+    class="{% if next_branch_pk %} text-primary {% else %} text-muted {% endif %} mx-2"
+    href="{% if next_branch_pk %} {% url 'update_branch' pk=next_branch_pk %} {% else %} # {% endif %}"
+    style="width: 1.4rem"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-6 h-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="m8.25 4.5 7.5 7.5-7.5 7.5"
+      />
+    </svg>
+  </a>
+  <a
+    class="{% if last_branch_pk %} text-primary {% else %} text-muted {% endif %} mx-2"
+    href="{% if last_branch_pk %} {% url 'update_branch' pk=last_branch_pk %} {% else %} # {% endif %}"
+    style="width: 1.4rem"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-6 h-6"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"
+      />
+    </svg>
+  </a>
+</div>

@@ -1,0 +1,14 @@
+{% extends 'branches/base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+    {% include 'branches/components/header.html' %}
+    <div class="h-75 d-flex flex-column justify-content-center align-items-center">
+        <h2>Yo have no branches yet.</h2>
+        <span>
+            <a class="btn btn-link" href="{% url 'new_branch' %}">Create</a> one now
+        </span>
+    </div>
+    {% include 'branches/components/nav.html' %}
+{% endblock %}

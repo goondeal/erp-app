@@ -1,0 +1,32 @@
+<div
+  id="header"
+  style="background-color: blue"
+  class="w-100 text-white p-2 d-flex align-items-center justify-content-center position-relative"
+>
+  Branch / Store / Cashier
+  <div class="d-flex align-items-center position-absolute end-0 me-2">
+    <a class="me-2" href="{% url 'new_branch' %}" style="width: 2rem">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff">
+        <path
+          fill-rule="evenodd"
+          d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </a>
+    {% if show_save_btn %}
+    <button id="save_btn" class="btn p-0 text-white" role="button" style="width: 2rem">
+      <svg
+        viewBox="0 0 30 30"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="#fff"
+      >
+        <path
+          d="M22,4h-2v6c0,0.552-0.448,1-1,1h-9c-0.552,0-1-0.448-1-1V4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18  c1.105,0,2-0.895,2-2V8L22,4z M22,24H8v-6c0-1.105,0.895-2,2-2h10c1.105,0,2,0.895,2,2V24z"
+        />
+        <rect height="5" width="2" x="16" y="4" />
+      </svg>
+    </button>
+    {% endif %}
+  </div>
+</div>
