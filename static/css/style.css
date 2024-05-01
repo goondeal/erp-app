@@ -1,46 +1,30 @@
-html, body {margin: 0; height: 100%;}
-
-/* .form-wrapper {
-  display: flex;
-  justify-content: start;
-  align-items: start;
+html,
+body {
+  margin: 0;
+  height: 100%;
 }
-.form-wrapper div {
+
+#update-branch-form div {
+  width: 100%;
   display: inline-flex;
   flex-direction: column;
   align-items: start;
   margin-bottom: 2em;
-}
-@media (min-width: 768px) {
-  .form-wrapper div {
-    width: 100%;
-  }
-}
-.form-wrapper label {
-  text-transform: capitalize;
-  margin-bottom: 0.8em;
-} */
-
-#update-branch-form div {
-    width: 100%;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: start;
-    margin-bottom: 2em;
-    margin-right: 1rem;
+  margin-right: 1rem;
 }
 
 #update-branch-form label {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
-#update-branch-form input, #update-branch-form textarea {
-    width: 100%;
+#update-branch-form input,
+#update-branch-form textarea {
+  width: 100%;
 }
 
 /* Make form responsive */
 @media (min-width: 768px) {
-    #update-branch-form div {
-        width: 45%;
-    }
+  #update-branch-form div {
+    width: 45%;
+  }
 }
